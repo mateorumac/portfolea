@@ -1,0 +1,157 @@
+.projects-section {
+  background-color: #FFD1DC;
+  padding: 5rem 2rem;
+  color: #1a1a2e;
+  overflow-x: hidden;
+}
+
+.projects-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  gap: 3rem;
+}
+
+.projects-title {
+  font-size: 2.5rem;
+  color: #ff4081;
+  font-weight: bold;
+  margin-bottom: 2rem;
+}
+
+.projects-cards-container {
+  display: flex;
+  justify-content: center;
+  gap: 2rem;
+  flex-wrap: wrap;
+  padding: 0 1rem; 
+  width: 100%; 
+  box-sizing: border-box; 
+}
+
+.projects-card {
+  display: flex;
+  gap: 1.5rem;
+  background-color: #2c2c54;
+  color: #ffffff;
+  padding: 1.5rem;
+  border-radius: 15px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+  width: 100%;
+  max-width: 800px;
+  height: 300px;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  box-sizing: border-box; 
+}
+
+.projects-card:hover {
+  transform: scale(1.05);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.5);
+}
+
+.projects-card-image-placeholder {
+  flex: 1;
+  max-width: 300px;
+  border-radius: 15px;
+  overflow: hidden;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #444;
+}
+
+.projects-overlay-text {
+  color: #f4f4f4;
+  font-size: 1rem;
+  font-weight: bold;
+  text-align: center;
+}
+
+.projects-card-content {
+  flex: 2;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 1rem;
+  text-align: left;
+}
+
+.projects-headline {
+  font-size: 1.8rem;
+  color: #ff85b3;
+  font-weight: bold;
+}
+
+.projects-cardtext {
+  font-size: 1rem;
+  line-height: 1.6;
+  color: #f4f4f4;
+}
+
+@media (max-width: 1024px) {
+  .projects-cards-container {
+    padding: 0 1rem;
+  }
+  .projects-card {
+    height: auto; 
+  }
+}
+
+@media (max-width: 768px) {
+  .projects-cards-container {
+    flex-direction: column;
+    gap: 1.5rem;
+    padding: 0 1rem; 
+  }
+
+  .projects-card {
+    flex-direction: column;
+    height: auto;
+  }
+
+  .projects-card-image-placeholder {
+    max-width: 100%;
+    height: 200px;
+  }
+
+  .projects-card-content {
+    text-align: center;
+    padding: 1rem;
+  }
+
+  .projects-headline {
+    font-size: 1.5rem;
+  }
+
+  .projects-cardtext {
+    font-size: 0.9rem;
+  }
+}
+
+@media (max-width: 576px) {
+  .projects-section {
+    padding: 3rem 1rem; 
+  }
+
+  .projects-cards-container {
+    padding: 0 0.5rem;
+  }
+
+  .projects-card {
+    padding: 1rem;
+  }
+
+  .projects-card-image-placeholder {
+    height: 180px;
+  }
+
+  .projects-headline {
+    font-size: 1.2rem;
+  }
+
+  .projects-cardtext {
+    font-size: 0.9rem;
+  }
+}

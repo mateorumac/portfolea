@@ -1,0 +1,140 @@
+.hero {
+  background-color: #FFD1DC; 
+  padding: 6rem 2rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: left;
+}
+
+.hero-container {
+  display: flex;
+  gap: 3rem;
+  max-width: 1200px;
+  width: 100%;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.hero-image img {
+  border-radius: 20px;
+  width: 450px;
+  animation: fadeInUp 1.5s ease;
+  transition: transform 0.5s ease, box-shadow 0.5s ease;
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.4);
+}
+
+.hero-image img:hover {
+  transform: scale(1.1);
+  box-shadow: 0 15px 30px rgba(30, 30, 30, 0.6);
+}
+
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(50px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.hero-text {
+  flex: 1;
+  color: #12183F; 
+  animation: fadeIn 1.5s ease;
+}
+
+.hero-text h1 {
+  font-size: 4rem;
+  font-family: "Dancing Script", cursive; /* Elegant, girly font */
+  color: #FF4081; /* Flamingo Pink */
+  margin-bottom: 1rem;
+  animation: slideInFromLeft 1.5s ease;
+}
+
+.hero-text p {
+  font-size: 1.8rem;
+  line-height: 2;
+  font-family: "Poppins", sans-serif;
+  color: rgba(15, 27, 43, 0.95);
+  animation: slideInFromLeft 1.5s ease 0.5s;
+}
+
+/* Keyframe animations */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes slideInFromLeft {
+  from {
+    opacity: 0;
+    transform: translateX(-50px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+/* Responsive Design */
+
+/* Laptop Screens */
+@media (max-width: 1200px) {
+  .hero-image img {
+    width: 400px;
+  }
+
+  .hero-text h1 {
+    font-size: 3.5rem;
+  }
+
+  .hero-text p {
+    font-size: 1.5rem;
+  }
+}
+
+/* Tablet Screens */
+@media (max-width: 768px) {
+  .hero-container {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .hero-image img {
+    width: 350px;
+  }
+
+  .hero-text h1 {
+    font-size: 3rem;
+  }
+
+  .hero-text p {
+    font-size: 1.4rem;
+  }
+}
+
+/* Mobile Screens */
+@media (max-width: 576px) {
+  .hero-container {
+    gap: 2rem;
+  }
+
+  .hero-image img {
+    width: 300px;
+  }
+
+  .hero-text h1 {
+    font-size: 2.5rem;
+  }
+
+  .hero-text p {
+    font-size: 1.2rem;
+  }
+}
